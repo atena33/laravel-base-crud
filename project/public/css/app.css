@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body .header {
+  height: 100px;
+  background: yellow;
+}
+
+body .main {
+  margin-left: 20px;
+}
+
+body .footer {
+  height: 100px;
+  background: green;
+}
+
