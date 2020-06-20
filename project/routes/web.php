@@ -2,16 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/','CagnoliniController@index')->name('home');
-Route::get('/show/{id}','CagnoliniController@show')->name('show');
+Route::get('/','OminoController@index') ->name('home');
+Route::get('/show/{id}','OminoController@show') ->name('show');
+Route::get('/edit/{id}','OminoController@edit') ->name('edit');
+Route::post('/update/{id}','OminoController@update') ->name('update');
+Route::get('/delete/{id}','OminoController@delete') ->name('delete');
+Route::get('/create','OminoController@create') ->name('create');
+Route::post('/store','OminoController@store') ->name('store');

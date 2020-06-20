@@ -10,7 +10,10 @@ body {
   }
 
   .main {
-    margin-left: 20px;
+    margin: 20px;
+      label, input {
+      margin: 20px;
+    }
   }
 
   .footer

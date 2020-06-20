@@ -1,13 +1,19 @@
-@extends('general_layout')
+@extends('layouts.general_layout')
 
 @section('content')
   <div class="main">
-  <h1>I cagnolini sono: </h1>
-    @foreach ($cagnolini as $cagnolino)
+
+    @if (session('success'))
+      <h1>{{session('success')}}</h1>
+    @endif
+
+    <a href="{{route('create')}}">CREATE NEW OMINO</a>
+
+    @foreach ($omini as $omino)
        <ul>
         <li>
-           <a href="{{route('show', $cagnolino['id'])}}">
-             {{$cagnolino['nome']}}
+           <a href="{{route('show', $omino['id'])}}">
+             {{$omino['name']}} {{$omino['lastname']}}
            </a>
         </li>
        </ul>

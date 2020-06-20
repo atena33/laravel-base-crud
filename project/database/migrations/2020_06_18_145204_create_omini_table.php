@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCagnoliniTable extends Migration
+
+class CreateOminiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +14,16 @@ class CreateCagnoliniTable extends Migration
      */
     public function up()
     {
-        Schema::create('cagnolini', function (Blueprint $table) {
+        Schema::create('omini', function (Blueprint $table) {
             $table->id();
 
-            $table ->string('nome');
-            $table ->string('tipo');
-            $table ->unsignedDecimal('altezza');
-            $table ->unsignedSmallInteger('peso');
+            $table ->string('name');
+            $table ->string('lastname');
+            $table ->string('address');
+            $table ->string('zip');
+            $table ->string('state');
+            $table ->string('phone_number');
+            $table ->string('role');
 
             $table->timestamps();
         });
@@ -32,6 +36,6 @@ class CreateCagnoliniTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cagnolini');
+        Schema::dropIfExists('omini');
     }
 }
